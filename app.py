@@ -1,5 +1,5 @@
 """
-Application Name
+Avalanche NFT Tool
 
 Application Description
 

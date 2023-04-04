@@ -1,5 +1,5 @@
 /*
-Build file for
+Build file for Avalanche NFT Tool
 */
 
 -- Table Name: 

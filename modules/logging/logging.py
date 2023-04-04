@@ -15,6 +15,7 @@ import logging
 import logging.config
 import os
 import yaml
+import time
 
 # 3rd Party Library Imports
 
@@ -64,5 +65,31 @@ def get_logger(name):
     
     logger = logging.getLogger(name)
     return logger
+
+
+def log_exec_time(func):
+    """Decorator that logs the execution time of a function.
+
+    This decorator logs the execution time of a function using the `logging` module.
+    It also adds a log message before and after the function execution, indicating
+    that the function is being executed and when it's done executing.
+
+    Example usage:
+
+        @log_execution_time
+        def my_function():
+            # code here
+
+    This will log the execution time of `my_function` using the `logging` module.
+    """
+    def wrapper(*args, **kwargs):
+        logging.info(f'Executing {func.__name__}...')
+        start_time = time.perf_counter()
+        result = func(*args, **kwargs)
+        end_time = time.perf_counter()
+        final_time = end_time - start_time
+        logging.info(f'Done in {final_time:.2f} seconds.')
+        return result
+    return wrapper
 
 # Run

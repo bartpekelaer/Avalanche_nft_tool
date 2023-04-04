@@ -1,0 +1,17 @@
+# Configurations:
+
+application:
+  version: 0.0.1
+
+logging:
+  level: INFO
+  format: '%(asctime)s %(levelname)s %(message)s'
+  
+ui:
+  window_name: My Application
+  window_width: 1600
+  window_height: 900
+  bg: "#d6d6d6"
+  text: "#FFFFFF"
+  font: Arial
+  font_size: 12

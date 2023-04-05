@@ -10,6 +10,7 @@ __version__ = "0.1.0"
 __licence__ = "MIT"
 
 # Standard Library Imports
+import tkinter
 import yaml
 
 # 3rd Party Library Imports
